@@ -1,0 +1,13 @@
+int main() {
+    int x = 5;
+    int y = x; // x is a modifiable lvalue
+
+    const int d = 5;
+    const int e = d; // d is a non-modifiable lvalue
+
+    int i = 5; // 5 is a rvalue
+
+    // operator+ expects its operands to be rvalues
+
+    x = y; // y is not an rvalue but this is allowed because of lval to rval conversion
+}
